@@ -1,0 +1,24 @@
+# Site settings
+title: Svens Blog
+header-img: img/home-bg.jpg
+copyright_name: Sven-Michael Stübe
+description: "Blog about xamarin and c# development"
+baseurl: ""
+url: "http://smstuebe.de"
+twitter_username: stuebe2k14
+github_username:  smstuebe
+stackoverflow_id: 1489968
+
+analytics:
+  provider: google
+  google: 
+    tracking_id: 'UA-75054503-1'
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [jekyll-paginate, jekyll-feed]
