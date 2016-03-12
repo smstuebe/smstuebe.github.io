@@ -14,7 +14,7 @@
                     </li>
                     {% if site.twitter_username %}
                     <li>
-                        <a href="https://twitter.com/{{ site.twitter_username }}">
+                        <a href="https://twitter.com/{{ site.twitter_username }}" onclick="tol('https://twitter.com/{{ site.twitter_username }}'); return false;">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -34,7 +34,7 @@
                     {% endif %}
                     {% if site.github_username %}
                     <li>
-                        <a href="https://github.com/{{ site.github_username }}">
+                        <a href="https://github.com/{{ site.github_username }}" onclick="tol('https://github.com/{{ site.github_username }}'); return false;">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -54,7 +54,7 @@
                     {% endif %}
 					{% if site.stackoverflow_id %}
                     <li>
-                        <a href="https://stackoverflow.com/users/{{ site.stackoverflow_id }}">
+                        <a href="https://stackoverflow.com/users/{{ site.stackoverflow_id }}" onclick="tol('https://stackoverflow.com/users/{{ site.stackoverflow_id }}'); return false;">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
@@ -86,5 +86,6 @@
 
   ga('create', 'UA-75054503-1', 'auto');
   ga('send', 'pageview');
-
+  var tol = function(u){ga('send', 'event', 'outbound', 'click', url, {'transport': 'beacon','hitCallback': function(){document.location = url;}});
+}
 </script>
