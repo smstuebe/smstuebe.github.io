@@ -5,6 +5,7 @@ subtitle:   "The first release of my Fingerprint plugin is now available."
 date:       2016-01-18 12:00:00
 author:     "Sven-Michael Stübe"
 header-img: "img/post-1-bg.jpg"
+tags: [Xamarin, Fingerprint, Plugin]
 ---
 
 I recently pushed the first stable version of my fingerprint plugin for xamarin to NuGet. It allows you to authenticate a user via the fingerprint sensor. The code is available on <i class="fa fa-github"></i>[github](https://github.com/smstuebe/xamarin-fingerprint "github"). For me it's just a project to play around with some interesting things (e.g. <i class="fa fa-github"></i>[FAKE](https://github.com/fsharp/FAKE "FAKE") build scripts) and build something useful.
