@@ -70,3 +70,5 @@ It may be useful to implement more properties like <code>HasSensor</code>, <code
 
 <br>
 <small>[Background Photo](https://flic.kr/p/DW1sP "Photo") by [c0t0s0d0](https://www.flickr.com/photos/c0t0s0d0/ "c0t0s0d0") / [CC BY](http://creativecommons.org/licenses/by/2.0/ "CC BY")</small>
+<br>
+<small>Found a typo? Send me a pull request!</small>
