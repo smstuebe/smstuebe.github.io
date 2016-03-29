@@ -2,7 +2,7 @@
 layout:     post
 title:      "Fingerprint plugin for Xamarin released"
 subtitle:   "The first release of my Fingerprint plugin is now available."
-date:       2016-01-18 12:00:00
+date:       2016-03-18 12:00:00
 author:     "Sven-Michael Stübe"
 header-img: "img/post-1-bg.jpg"
 tags: [Xamarin, Fingerprint, Plugin]
