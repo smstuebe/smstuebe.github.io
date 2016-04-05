@@ -225,6 +225,8 @@ Some fonts have more than 2 Attributes. With the gathered knowledge it is now re
 <h3>Code Sample</h3>
 The actual implementation of the Renderers and the sample projects are pushed in a github project (<i class="fa fa-github"></i>[xamarin-forms-formattedtext](https://github.com/smstuebe/xamarin-forms-formattedtext "xamarin-forms-formattedtext")). Feel free to use these if you want to play around or have a closer look to the formatted text issue.
 
+<center>If you like the answer, I'd appreciate an upvote ;) <br><a href="http://stackoverflow.com/a/36236651/1489968" onclick="tol('http://stackoverflow.com/a/36236651/1489968'); return false;" target="_blank" title="Answer">http://stackoverflow.com/a/36236651/1489968</a><br>Thanks!</center>
+
 
 <br>
 <small>[Background Photo](https://flic.kr/p/fJNKB "Photo") by [Karen](https://www.flickr.com/photos/56832361@N00/ "Karen") / [CC BY](http://creativecommons.org/licenses/by/2.0/ "CC BY")</small>
