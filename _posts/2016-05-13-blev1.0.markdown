@@ -8,10 +8,6 @@ header-img: "img/ble-bg.jpg"
 tags: [Xamarin, Bluetooth, Plugin]
 ---
 
-###TODO
-
-- link beta package in shied io
-
 Adrian ([@secelead](https://twitter.com/secelead "@secelead")) and me pushed the first release candidate of our bluetooth low energy plugin for xamarin and MvvmCross to NuGet, today. The code is available on <i class="fa fa-github"></i>[github](https://github.com/xabre/xamarin-bluetooth-le "github"). It is based on Monkey robotics, but heavily refactored. 
 
 It currently supports Android and iOS and the following features are implemented.
