@@ -1,0 +1,140 @@
+---
+layout:     post
+title:      "Bluetooth LE plugin for Xamarin released"
+subtitle:   "The first release candidate of our BLE plugin is now available."
+date:       2016-05-13 00:00:00
+author:     "Sven-Michael Stübe"
+header-img: "img/ble-bg.jpg"
+tags: [Xamarin, Bluetooth, Plugin]
+---
+
+###TODO
+
+- link beta package in shied io
+
+Adrian ([@secelead](https://twitter.com/secelead "@secelead")) and me pushed the first release candidate of our bluetooth low energy plugin for xamarin and MvvmCross to NuGet, today. The code is available on <i class="fa fa-github"></i>[github](https://github.com/xabre/xamarin-bluetooth-le "github"). It is based on Monkey robotics, but heavily refactored. 
+
+It currently supports Android and iOS and the following features are implemented.
+
+<h3>Discover</h3>
+Finding devices is the first step. You can discover
+
+**all advertised devices**
+
+{% highlight c# %}
+adapter.StartScanningForDevicesAsync();
+{% endhighlight %}
+
+**devices with advertised services**
+
+{% highlight c# %}
+adapter.StartScanningForDevicesAsync(new[] { Guid.Parse("ffe0ecd2-3d16-4f8d-90de-e89e7fc396a5") })
+{% endhighlight %}
+
+**devices that fullfil a custom filter expression**
+
+You can provide any <code>Func<IDevice, bool></code> you want. You can access the simple properties of a device (like its name) or use the advertisement records to filter devices on a more complex base.
+
+{% highlight c# %}
+adapter.StartScanningForDevicesAsync(dev => dev.Name.Contains("Sven"));
+{% endhighlight %}
+
+**a single device**
+
+In some use cases you might be only interested in a particular device (e.g. last connected device). In these cases starting the discovery, handling events, etc. is annoying. We implemented this for you ;)
+
+{% highlight c# %}
+var device = adapter.DiscoverDeviceAsync(dev => dev.Name.Equals("Adrian")));
+{% endhighlight %}
+
+<h3>Connect / Disconnect</h3>
+For connecting the perviously discovered device, you have to use the adapter. We are currently discussing to move the connect and disconnect functions to <code>IDevice</code>.
+
+{% highlight c# %}
+await adapter.ConnectToDeviceAync(device);
+await adapter.DisconnectDeviceAsync(device);
+{% endhighlight %}
+
+<h3>Services</h3>
+Getting the services of a device is easy.
+
+{% highlight c# %}
+var services = await device.GetServicesAsync();
+// or
+
+var service = await device.GetServiceAsync(Guid.Parse("ffe0ecd2-3d16-4f8d-90de-e89e7fc396a5"));
+{% endhighlight %}
+
+<h3>Characteristics</h3>
+Getting the characteristics of a service is as easy as getting a service of a device.
+
+{% highlight c# %}
+var characteristics = await service.GetCharacteristicsAsync();
+// or
+
+var characteristic = await service.GetCharacteristicAsync(Guid.Parse("ffe0ecd2-3d16-4f8d-1234-000000000000"));
+{% endhighlight %}
+
+After you have found your characteristic, you can read, write or subscribe to notification.
+
+{% highlight c# %}
+var data = await characteristic.ReadAsync();
+data[0] = 0x13;
+await characteristic.WriteAsync(data);
+
+characteristic.ValueUpdated += (s, e) =>
+{
+    Debug.WriteLine("New value: {0}", e.Characteristic.Value);
+};
+characteristic.StartUpdates();
+{% endhighlight %}
+
+`characteristic.StartUpdates()` starts listening for notifications and updates the `Value` of `characteristic` when the notification has been received successfully. You can stop listening with `characteristic.StopUpdates()`.
+
+<h3>Reading Rssi</h3>
+Initially, you get the Rssi value when you discover the device. If you want to update it, you can use `UpdateRssiAsync`. Due some limitations, this works only while being connected to the device.
+
+{% highlight c# %}
+if (await device.UpdateRssiAsync())
+{
+    Debug.WriteLine("The new rssi value is: {0}", device.Rssi);
+}
+{% endhighlight %}
+
+<h2 class="section-heading">Give it a try</h2>
+If you want to try it you have two options.
+You can simply clone the repository and build and execute the sample applications, or integrate it directly into your own app via NuGet <span class="inline">[![NuGet](https://img.shields.io/nuget/vpre/Plugin.BLE.svg?label=NuGet)](https://www.nuget.org/packages/Plugin.BLE/1.0.0-beta) [![NuGet MvvMCross](https://img.shields.io/nuget/vpre/MvvmCross.Plugin.BLE.svg?label=NuGet MvvMCross)](https://www.nuget.org/packages/MvvmCross.Plugin.BLE/1.0.0-beta).</span>
+
+{% highlight ps1 %}
+Install-Package Plugin.BLE -Pre
+// or
+Install-Package MvvmCross.Plugin.BLE -Pre
+{% endhighlight %}
+
+<h2 class="section-heading">Our goals for v 1.0</h2>
+Adrian started this project last year as MvvmCross plugin. He fixed alot of bugs and made it stable. It has been in v 0.9.x for quite a while and we wanted to bringt it to v 1.0. In recent weeks, we refactored it with the goals
+
+- provide a "vanilla" Xamarin plugin
+- provide a sample app
+- streamline the API (make it asnyc and use cancelable)
+- get rid of old code
+
+<h2 class="section-heading">What next?</h2>
+We are aiming for a soon stable release. We invite everybody to give some feedback and suggestions. Feel free, to create an issue on github or contact us directly on twitter or [slack](https://xamarinchat.slack.com "slack").
+The open issues can be found on [github](https://github.com/xabre/xamarin-bluetooth-le/milestones/1.0.0 "github").
+
+The main todos are
+
+- better build process
+- more documentation
+- get rid of fat single gatt callback (split it)
+- unit tests
+- extend `IBluetooth`
+  - request permission
+  - enable bluetooth
+  - basic info like IsBleAvailable, MaxSupportedVersion, ...
+
+<br>
+<small>[Background Photo](https://flic.kr/p/mFd3H2 "Photo") by [Jona Nalder](https://www.flickr.com/photos/jnxyz/ "Jona Nalder") / [CC BY](http://creativecommons.org/licenses/by/2.0/ "CC BY")</small>
+<br>
+<small>Found a typo? Send me a pull request!</small>
