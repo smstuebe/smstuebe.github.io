@@ -10,7 +10,7 @@ tags: [Xamarin, MvvmCross, RecyclerView, UITableView, swipe to dismiss]
 
 I recently had to implement swipe to dismiss (or delete). The items should get dismissed immediately without a delete button. For Android I used a `MvxRecyclerView` and on iOS the good old `UITableView`. The example code is available on <i class="fa fa-github"></i><a href="https://github.com/smstuebe/mvvmcross-examples/tree/master/Swipe2Dismiss" target="_blank">github</a>. 
 
-The impulse for writing this blog post was a tweet by @waniste, who thought it is uncomfortable to implement it with a `MvxRecyclerView`. I had to convince him of the opposite, because MvvmCross is awsome and not uncomfortable :P
+The impulse for writing this blog post was a tweet by @waniste, who thought it is uncomfortable to implement it with a `MvxRecyclerView`. I had to convince him of the opposite, because MvvmCross is awesome and not uncomfortable :P
 
 <blockquote class="twitter-tweet" data-lang="de"><p lang="en" dir="ltr">Seems like implementing &quot;SwipeToDismiss&quot; functionality for MvxRecyclerView isn&#39;t very comfortable. Will dig into it another day. <a href="https://twitter.com/hashtag/MvvmCross?src=hash">#MvvmCross</a></p>&mdash; Stefan (@waniste) <a href="https://twitter.com/waniste/status/734418485875507204">22. Mai 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
