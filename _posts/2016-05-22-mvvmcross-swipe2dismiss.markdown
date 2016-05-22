@@ -155,4 +155,18 @@ private void SwipeHandler(UIPanGestureRecognizer recognizer)
 
 **Note:** `ViewModel` is the casted `DataContext` of the cell.
 
+And for some practice, I want to allow only swipes to the left on iOS. Therefore we need to override `ShouldBegin` where we check if the initial translation goes left and it goes more horizontal then vertical (else it might be the scroll swipe of the table).
+
+{% highlight c# %}
+public override bool ShouldBegin(UIGestureRecognizer recognizer)
+{
+    var deleteRecognizer = recognizer as UIPanGestureRecognizer;
+    if (deleteRecognizer == null)
+        return false;
+
+    var translation = deleteRecognizer.TranslationInView(Superview);
+    return Math.Abs(translation.X) >= Math.Abs(translation.Y) && translation.X <= 0;
+} 
+{% endhighlight %}	
+
 <small>Found a typo? Send me a pull request!</small>
