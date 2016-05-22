@@ -10,7 +10,7 @@ tags: [Xamarin, MvvmCross, RecyclerView, UITableView, swipe to dismiss]
 
 I recently had to implement swipe to dismiss (or delete). The items should get dismissed immediately without a delete button. For Android I used a `MvxRecyclerView` and on iOS the good old `UITableView`. The example code is available on <i class="fa fa-github"></i><a href="https://github.com/smstuebe/mvvmcross-examples/tree/master/Swipe2Dismiss" target="_blank">github</a>. 
 
-The impulse for writing this blog post was a tweet by @waniste, who thought it is uncomfortable to implement it with a `MvxRecyclerView`.
+The impulse for writing this blog post was a tweet by @waniste, who thought it is uncomfortable to implement it with a `MvxRecyclerView`. I had to convince him of the opposite, because MvvmCross is awsome and not uncomfortable :P
 
 <blockquote class="twitter-tweet" data-lang="de"><p lang="en" dir="ltr">Seems like implementing &quot;SwipeToDismiss&quot; functionality for MvxRecyclerView isn&#39;t very comfortable. Will dig into it another day. <a href="https://twitter.com/hashtag/MvvmCross?src=hash">#MvvmCross</a></p>&mdash; Stefan (@waniste) <a href="https://twitter.com/waniste/status/734418485875507204">22. Mai 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -22,21 +22,20 @@ The ViewModel for our view creates the `MyItemViewModel`s and passes a `deleteCo
 
 {% highlight c# %}
 public class FirstViewModel 
-	: MvxViewModel
+    : MvxViewModel
 {
-	public ObservableCollection<MyItemViewModel> MyItems { get; } = new ObservableCollection<MyItemViewModel>();
+    public ObservableCollection<MyItemViewModel> MyItems { get; } = new ObservableCollection<MyItemViewModel>();
 
-	public FirstViewModel()
-	{
-		var deleteCommand = new MvxCommand<MyItemViewModel>(DeleteItem);
-		MyItems.Add(new MyItemViewModel(deleteCommand) {Text = "Swipe me please!"});
-		// ...
-	}
+    public FirstViewModel()
+    {
+        var deleteCommand = new MvxCommand<MyItemViewModel>(DeleteItem);
+        MyItems.Add(new MyItemViewModel(deleteCommand) {Text = "Swipe me please!"});
+    }
 
-	private void DeleteItem(MyItemViewModel item)
-	{
-		InvokeOnMainThread(() => MyItems.Remove(item));
-	}
+    private void DeleteItem(MyItemViewModel item)
+    {
+        InvokeOnMainThread(() => MyItems.Remove(item));
+    }
 }
 {% endhighlight %}
 
@@ -47,18 +46,18 @@ The `MyItemViewModel` is simple, too. It contains only a Text property, and a `D
 {% highlight c# %}
 public class MyItemViewModel
 {
-	public MvxCommand<MyItemViewModel> DeleteCommand { get; }
-	public string Text { get; set; }
+    public MvxCommand<MyItemViewModel> DeleteCommand { get; }
+    public string Text { get; set; }
 
-	public MyItemViewModel(MvxCommand<MyItemViewModel> deleteCommand)
-	{
-		DeleteCommand = deleteCommand;
-	}
+    public MyItemViewModel(MvxCommand<MyItemViewModel> deleteCommand)
+    {
+        DeleteCommand = deleteCommand;
+    }
 
-	public void Delete()
-	{
-		DeleteCommand?.Execute(this);
-	}
+    public void Delete()
+    {
+        DeleteCommand?.Execute(this);
+    }
 }
 {% endhighlight %}
 
