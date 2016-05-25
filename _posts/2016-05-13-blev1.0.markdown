@@ -12,6 +12,17 @@ Adrian ([@secelead](https://twitter.com/secelead "@secelead")) and I pushed the 
 
 It currently supports Android and iOS and the following features are implemented.
 
+<h3>Bluetooth State</h3>
+You can check if the device supports bluetooth LE, check whether it is turned on or off and subscribe to any changes on this state.
+
+{% highlight c# %}
+var state = ble.State;
+ble.StateChanged += (s, e) => 
+{
+    Debug.WriteLine($"The bluetooth state changed to {e.NewState}");
+};
+{% endhighlight %}
+
 <h3>Discover</h3>
 Finding devices is the first step. You can discover
 
@@ -107,8 +118,21 @@ Install-Package Plugin.BLE -Pre
 Install-Package MvvmCross.Plugin.BLE -Pre
 {% endhighlight %}
 
+<h3>Sample app</h3>
+We provide a sample Xamarin.Forms app, that is a basic bluetooth LE scanner. With this app, it's possible to 
+
+- check the bluetooth LE status
+- discover devices
+- connect/disconnect
+- discover the services
+- discover the characteristics
+- see characteristic details
+- read/write and register for notifications of a characteristic
+
+Have a look at the code and use it as starting point to learn about the plugin and play around with it.
+
 <h2 class="section-heading">Our goals for v 1.0</h2>
-Adrian started this project last year as MvvmCross plugin. He fixed alot of bugs and made it stable. It has been in v 0.9.x for quite a while and we wanted to bringt it to v 1.0. In recent weeks, we refactored it with the goals
+Adrian started this project last year as MvvmCross plugin. He fixed alot of bugs and made it stable. It has been in v 0.9.x for quite a while and we wanted to bring it to v 1.0. In recent weeks, we refactored it with the goals
 
 - provide a "vanilla" Xamarin plugin
 - provide a sample app
@@ -116,7 +140,7 @@ Adrian started this project last year as MvvmCross plugin. He fixed alot of bugs
 - get rid of old code
 
 <h2 class="section-heading">What next?</h2>
-We are aiming for a soon stable release. We invite everybody to give some feedback and suggestions. Feel free, to create an issue on github or contact us directly on twitter or [slack](https://xamarinchat.slack.com "slack").
+We are aiming for a soon stable release. <b>We invite everybody to give some feedback and suggestions</b>. Feel free, to create an issue on github or contact us directly on twitter or [slack](https://xamarinchat.slack.com "slack").
 The open issues can be found on [github](https://github.com/xabre/xamarin-bluetooth-le/milestones/1.0.0 "github").
 
 The main todos are
