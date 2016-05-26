@@ -110,7 +110,7 @@ if (await device.UpdateRssiAsync())
 
 <h2 class="section-heading">Give it a try</h2>
 If you want to try it you have two options.
-You can simply clone the repository and build and execute the sample applications, or integrate it directly into your own app via NuGet <span class="inline">[![NuGet](https://img.shields.io/nuget/vpre/Plugin.BLE.svg?label=NuGet)](https://www.nuget.org/packages/Plugin.BLE/1.0.0-beta) [![NuGet MvvMCross](https://img.shields.io/nuget/vpre/MvvmCross.Plugin.BLE.svg?label=NuGet MvvMCross)](https://www.nuget.org/packages/MvvmCross.Plugin.BLE/1.0.0-beta).</span>
+You can simply clone the repository and build and execute the sample applications, or integrate it directly into your own app via NuGet <span class="inline">[![NuGet](https://img.shields.io/nuget/vpre/Plugin.BLE.svg?label=NuGet)](https://www.nuget.org/packages/Plugin.BLE/1.0.0-beta2) [![NuGet MvvMCross](https://img.shields.io/nuget/vpre/MvvmCross.Plugin.BLE.svg?label=NuGet MvvMCross)](https://www.nuget.org/packages/MvvmCross.Plugin.BLE/1.0.0-beta2).</span>
 
 {% highlight ps1 %}
 Install-Package Plugin.BLE -Pre
