@@ -123,7 +123,7 @@ public class AgeTemplateSelector : MvxTemplateSelector<PetViewModelBase>
 }
 {% endhighlight %}
 
-This time we override `SelectItemViewType` that is called with a `PetViewModelBase` as parameter. We return the layout id directly as view type again. You can use the `MvxTemplateSelector<T> in the first scenario, too.
+This time we override `SelectItemViewType` that is called with a `PetViewModelBase` as parameter. We return the layout id directly as view type again. You can use the `MvxTemplateSelector<T>` in the first scenario, too.
 
 **Setting the Selector**
 
