@@ -8,7 +8,7 @@ header-img: "img/fonts-bg.jpg"
 tags: [Xamarin, Forms, Android, iOS, Label]
 ---
 
-I saw <a href="http://stackoverflow.com/q/39199975/1489968" target="_blank">a question on stackoverflow</a> and thought it would be a nice use for Effects.
+I saw <a href="http://stackoverflow.com/q/39199975/1489968" target="_blank">a question on stackoverflow</a> and thought it would be a nice use case for Effects.
 
 <h2 class="section-heading">Problem</h2>
 
