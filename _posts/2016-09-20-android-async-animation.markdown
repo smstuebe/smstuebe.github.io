@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Awaitable Animations on Android"
-subtitle:   "A neat extension method allows you to await Android animations"
+subtitle:   "A tiny extension method allows you to await Android animations"
 date:       2016-09-20 00:00:00
 author:     "Sven-Michael Stübe"
 header-img: "img/home-bg.jpg"
