@@ -19,10 +19,10 @@ The Android way would be to implement a `IAnimatorListener`, set the color in it
 
 {% highlight c# %}
 _icon.SetColorFilter(NegativeColor);
-var small = ObjectAnimator.OfFloat(_icon, "translationX", -10f, 10f);
-small.SetDuration(500);
-small.SetInterpolator(new CycleInterpolator(5));
-await small.StartAsync();
+var shake = ObjectAnimator.OfFloat(_icon, "translationX", -10f, 10f);
+shake.SetDuration(500);
+shake.SetInterpolator(new CycleInterpolator(5));
+await shake.StartAsync();
 _icon.ClearColorFilter();
 {% endhighlight %}
 
