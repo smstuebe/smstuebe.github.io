@@ -11,7 +11,7 @@ tags: [Xamarin, Android, Animation, async, await]
 Xamarin has done a great job on bringing async/await to animations on iOS (as Kerry <a href="http://kerry.lothrop.de/animation-fun/" target="_blank">shows on his blog</a>) and on <a href="https://blog.xamarin.com/creating-animations-with-xamarin-forms/" target="_blank">Xamarin.Forms</a>. For my Fingerprint Plugin I was playing around with some animations on Android and I expected to find a similar animation extension - but I did not (If I've overseen something, tweet me). But, awaiting animations is pretty easy with a small extension method.
 
 <h3>Problem</h3>
-I want to colorize a icon, animate it and remove the color after the animation.
+I want to colorize a icon, animate it and remove the color after the animation. In another use case I want to animate the icon and close the dialog afterwards.
 
 <h3>Solution</h3>
 
