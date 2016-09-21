@@ -48,7 +48,7 @@ public static class AnimatorExtensions
 
 **TaskAnimationListener**
 
-The `TaskAnimationListener` implements `IAnimatorListener` and uses a `TaskCompletionSource` to convert the events `OnAnimationCancel` and `OnAnimationEnd` to the Canceled ot Completed states of a Task.
+The `TaskAnimationListener` implements `IAnimatorListener` and uses a `TaskCompletionSource` to convert the events `OnAnimationCancel` and `OnAnimationEnd` to the Canceled or Completed states of a Task.
 
 {% highlight c# %}
 public class TaskAnimationListener : Java.Lang.Object, Animator.IAnimatorListener
