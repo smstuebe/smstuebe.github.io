@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Fixing Android AppCompat build errors"
+title:      "Fixing Xamarin.Android build errors"
 subtitle:   "How to avoid or escape the NuGet cache hell that causes build errors when building Xamarin.Forms or Xamarin.Android apps"
 date:       2016-10-29 12:00:00
 author:     "Sven-Michael Stübe"
