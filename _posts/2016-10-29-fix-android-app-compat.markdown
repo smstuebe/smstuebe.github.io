@@ -8,7 +8,9 @@ header-img: "img/nuget-hell-bg.jpg"
 tags: [Xamarin, Android, Xamarin.Forms, AppCompat]
 ---
 
-Today we had an awesome Xamarin Dev Day in Munich. Unfortunately a lot of people, especially people (and MVPs :P) that have installed Xamarin freshly, had problems building the sample apps. If you just installed Xamarin or updated the Xamarin.Forms NuGet package or one of the Xamarin.Android packages and run into one of the listed error messages, reading further will probably relief your pain. 
+Today we had an awesome Xamarin Dev Day in Munich. Unfortunately a lot of people, especially people (and MVPs :P) that have installed Xamarin freshly, had problems building the sample apps. 
+
+If you just installed Xamarin or updated the Xamarin.Forms NuGet package or one of the Xamarin.Android packages and run into one of the listed error messages, reading further will probably relief your pain. 
 
 <h2 class="section-heading">Errors</h2>
 
