@@ -10,11 +10,11 @@ tags: [Xamarin, Android, Xamarin.Forms, AppCompat]
 
 Today we had an awesome Xamarin Dev Day in Munich. Unfortunately a lot of people, especially people (and MVPs :P) that have installed Xamarin freshly, had problems building the sample apps. 
 
-If you just installed Xamarin or updated the Xamarin.Forms NuGet package or one of the Xamarin.Android packages and run into one of the listed error messages, reading further will probably relief your pain. 
+If you just installed Xamarin or updated the Xamarin.Forms NuGet package or one of the Xamarin.Android packages and run into one of the listed error messages, reading further will probably relieve your pain. 
 
 <h2 class="section-heading">Errors</h2>
 
-We have seen a variety of build errors. Here are a couple of them.
+We saw a variety of build errors. Here are a couple of them.
 
 {% highlight text %}
 Please install package: 'Xamarin.Android.Support.v4' available in SDK installer. Java library file ...\AppData\Local\Xamarin\Xamarin.Android.Support.v4\23.3.0.0\content\libs/internal_impl-23.3.0.jar doesn't exist.	
