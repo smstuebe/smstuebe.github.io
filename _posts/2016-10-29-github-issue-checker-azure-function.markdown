@@ -154,7 +154,7 @@ The function then:
 - generates a message based on the matching quote
 - creates a new comment on the issue
 
-The format of the issue request is documented <a href="https://developer.github.com/v3/activity/events/types/#issuesevent" target="_blank">here</a>[here].
+The format of the issue request is documented <a href="https://developer.github.com/v3/activity/events/types/#issuesevent" target="_blank">here</a>.
 
 **CheckIssueWithTemplate** 
 
