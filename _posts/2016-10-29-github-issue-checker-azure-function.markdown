@@ -22,7 +22,7 @@ When a user opens a new issue, github sends the issue information to a Azure Fun
 <h4 class="section-heading">Creation</h4>
 Creating a new Azure Function is very easy.
 
-- open https://portal.azure.com/
+- open <a href="https://portal.azure.com/" target="_blank">https://portal.azure.com/</a>
 - add a Function app and open it
 - click `New Function`
 - select scenario `Webhook + API`
@@ -32,7 +32,7 @@ Creating a new Azure Function is very easy.
 If you need a more detailed tutorial, click <a href="https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-a-web-hook-or-api-function" target="_blank">here</a>.
 
 <h4 class="section-heading">Configuration</h4>
-The github API for .NET is implemented in Octocat and it's available on NuGet.
+The github API for .NET is implemented in `Octokit` and it's available on NuGet.
 To add the NuGet package to your Function:
 
 - click `View files`
@@ -85,7 +85,7 @@ The request body will be written to the log. You can then copy it and paste it i
 <h4 class="section-heading">OAuth API token</h4>
 The github API requires an access token. Create a new one following these steps:
 
-- open https://github.com/
+- open <a href="https://github.com/" target="_blank">https://github.com/</a>
 - log in and open your settings
 - click `Personal access tokens`
 - click `Generate new token`
