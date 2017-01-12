@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Validating new github issues with Azure Functions"
-subtitle:   "Using Azure Functions and github webhooks to check if the issue template to relieve some pain of frustrated repository owners."
+subtitle:   "Using Azure Functions and github webhooks to check if the issue template was used to relieve some pain of frustrated repository owners."
 date:       2017-01-12 12:00:00
 author:     "Sven-Michael Stübe"
 header-img: "img/home-bg.jpg"
