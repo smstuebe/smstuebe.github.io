@@ -5,7 +5,7 @@ subtitle:   "Using Azure Functions and github webhooks to check if the issue tem
 date:       2017-01-12 12:00:00
 author:     "Sven-Michael Stübe"
 header-img: "img/home-bg.jpg"
-card-img:   "img/issue-checker-system.png"
+card-img:   "img/home-bg.jpg"
 tags: [Azure Functions, github, issues, issue template, webhook]
 ---
 
