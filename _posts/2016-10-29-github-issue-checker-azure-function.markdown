@@ -183,7 +183,7 @@ private static double CheckIssueWithTemplate(string[] issueLines, string[] templ
 
 **GetMessage** 
 
-The `GetMessage` generates a praisingly message if the user used the template and a sad one if he probably didn't.
+The `GetMessage` generates a praisingly message if the user used the template and a sad one if he probably didn't. You can add your on text and thresholds if you want.
 {% highlight c# %}
 static string GetMessage(string userName, double matchingQuote)
 {
@@ -233,5 +233,15 @@ will result in:
 A nice looking issue will be commented like:
 <img src="/img/issue-checker-good.png" /> 
 
+<h2 class="section-heading">Possible additions</h2>
+I think you are now aware of the possibilities that the connection of github webhooks, Azure Functions and the github API offers you. The Function can be easily enhanced with features like
+
+- close issues automatically if match qoute is smaller than 10%
+- save issue opener to database and block them after 3 bad issues
+- make the matching algorithm `CheckIssueWithTemplate` more intelligent
+- make the messages configurable like `ISSUE_TEMPLATE_CHECK.md` 
+- ...
+
+<i class="fa fa-twitter"></i> <a href="https://twitter.com/intent/tweet?text=@stuebe2k7" target="_blank">Tweet</a> me your best idea and win a like :) 
 
 <small>Found a typo? Send me a pull request!</small>
