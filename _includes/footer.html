@@ -14,7 +14,7 @@
                     </li>
                     {% if site.twitter_username %}
                     <li>
-                        <a href="https://twitter.com/{{ site.twitter_username }}" onclick="tol('https://twitter.com/{{ site.twitter_username }}'); return false;" target="_blank" title="Twitter">
+                        <a href="https://twitter.com/{{ site.twitter_username }}" onclick="return tol(this);" target="_blank" title="Twitter">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -34,7 +34,7 @@
                     {% endif %}
                     {% if site.github_username %}
                     <li>
-                        <a href="https://github.com/{{ site.github_username }}" onclick="tol('https://github.com/{{ site.github_username }}'); return false;" target="_blank" title="GitHub">
+                        <a href="https://github.com/{{ site.github_username }}" onclick="return tol(this);" target="_blank" title="GitHub">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -54,7 +54,7 @@
                     {% endif %}
                     {% if site.stackoverflow_id %}
                     <li>
-                        <a href="https://stackoverflow.com/users/{{ site.stackoverflow_id }}" onclick="tol('https://stackoverflow.com/users/{{ site.stackoverflow_id }}'); return false;" target="_blank" title="stackoverflow">
+                        <a href="https://stackoverflow.com/users/{{ site.stackoverflow_id }}" onclick="return tol(this);" target="_blank" title="stackoverflow">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
@@ -64,7 +64,7 @@
                     {% endif %}
 					{% if site.xing_id %}
                     <li>
-                        <a href="https://www.xing.com/profile/{{ site.xing_id }}" onclick="tol('https://www.xing.com/profile/{{ site.xing_id }}'); return false;" target="_blank" title="Xing">
+                        <a href="https://www.xing.com/profile/{{ site.xing_id }}" onclick="return tol(this);" target="_blank" title="Xing">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-xing fa-stack-1x fa-inverse"></i>
