@@ -27,7 +27,7 @@ public class Setup : MvxAndroidSetup
 } 
 {% endhighlight %}
 
-done.
+done. You **don't** need to override `AttachBaseContext`. And you can setup calligraphy via `CalligraphyConfig.InitDefault` as documented.
 
 
 <h2 class="section-heading">Problem</h2>
