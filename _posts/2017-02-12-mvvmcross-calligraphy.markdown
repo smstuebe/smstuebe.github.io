@@ -41,7 +41,7 @@ There is already the NuGet package / Xamarin component called <a href="https://d
 
 <h2 class="section-heading">How does it work?</h2>
 
-The package provides a custom `MvxAndroidViewBinder` called `CalligraphyMvxAndroidViewBinder` that uses applies calligraphy changes for every layout that is inflated with `BindingInflate` (which should be basically every view). All what's left, is to put the pieces together. Use `CalligraphyMvxAndroidViewFactory` to construct it and `CalligraphyMvxAndroidBindingBuilder` to return the factory in `CreateAndroidViewBinderFactory()`. In your code you only have to return a new `CalligraphyMvxAndroidBindingBuilder` in your Setup's `CreateBindingBuilder()` method.  
+The package provides a custom `MvxAndroidViewBinder` called `CalligraphyMvxAndroidViewBinder` that applies calligraphy changes for every layout that is inflated with `BindingInflate` (which should be basically every view). All what's left, is to put the pieces together. Use `CalligraphyMvxAndroidViewFactory` to construct it and `CalligraphyMvxAndroidBindingBuilder` to return the factory in `CreateAndroidViewBinderFactory()`. In your code you only have to return a new `CalligraphyMvxAndroidBindingBuilder` in your Setup's `CreateBindingBuilder()` method.  
 
 {% highlight c# %}
 public class Setup : MvxAndroidSetup
@@ -61,7 +61,7 @@ There is a nice side effect, using the factory directly. You don't have to wrap 
 
 <b>Code</b>
 
-The code is available on github (<i class="fa fa-github"></i><a href="https://github.com/smstuebe/mvvmcross-calligraphy" target="_blank" onclick="return tol(this);">mvvmcross-calligraphy</a>). It includes a sample project, too.
+The code is available on github <i class="fa fa-github"></i><a href="https://github.com/smstuebe/mvvmcross-calligraphy" target="_blank" onclick="return tol(this);">mvvmcross-calligraphy</a>. It includes a sample project, too.
 
 <center>If you like the answer, I'd appreciate an upvote ;) <br><a href="http://stackoverflow.com/a/42184315/1489968" target="_blank" title="Answer" onclick="return tol(this);">http://stackoverflow.com/a/42184315/1489968</a><br>Thanks!</center>
 
