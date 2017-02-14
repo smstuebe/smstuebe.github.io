@@ -32,7 +32,7 @@ done. You **don't** need to override `AttachBaseContext`. And you can setup call
 
 <h2 class="section-heading">Problem</h2>
 
-MvvmCross and Calligraphy are using the same approach for two different things. MvvmCross uses a custom LayoutInflator to provide xml based data binding and Calligraphy uses a custom LayoutInflator that sets the font to TextViews at inflation time. And if you use MvvmCross, the MvvmCross inflator wins.
+MvvmCross and Calligraphy are using the same approach for two different things. MvvmCross uses a custom LayoutInflater to provide xml based data binding and Calligraphy uses a custom LayoutInflater that sets the font to TextViews at inflation time. And if you use MvvmCross, the MvvmCross inflater wins.
 
 <h2 class="section-heading">Why not use Calligraphy Xamarin?</h2>
 
@@ -57,7 +57,7 @@ public class Setup : MvxAndroidSetup
 
 <h2 class="section-heading">Conclusion</h2>
 
-There is a nice side effect, using the factory directly. You don't have to wrap every context (Activity, Fragment) with the `CalligraphyContextWrapper`, because the binding inflator is used globally :) Yay! <a href="https://www.nuget.org/packages/MvvmCross.Calligraphy/" target="_blank" onclick="return tol(this);">MvvmCross.Calligraphy on NuGet</a>
+There is a nice side effect, using the factory directly. You don't have to wrap every context (Activity, Fragment) with the `CalligraphyContextWrapper`, because the binding inflater is used globally :) Yay! <a href="https://www.nuget.org/packages/MvvmCross.Calligraphy/" target="_blank" onclick="return tol(this);">MvvmCross.Calligraphy on NuGet</a>
 
 <b>Code</b>
 
