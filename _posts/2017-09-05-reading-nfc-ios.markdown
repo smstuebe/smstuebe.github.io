@@ -4,6 +4,7 @@ title:      "Reading NFC tags with <nobr>iOS 11</nobr> and CoreNFC"
 subtitle:   "CoreNFC is a new iOS 11 API that allows you to read NFC tags."
 date:       2017-09-05 12:00:00
 author:     "Sven-Michael Stübe"
+card-img:   "img/nfc-ios-icon.png"
 tags: [Xamarin, iOS, iOS 11, NFC, CoreNFC, NDEF]
 ---
 
