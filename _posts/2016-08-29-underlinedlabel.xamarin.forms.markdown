@@ -164,7 +164,7 @@ It's very easy to customize native controls with Effects.<br>
 Keep in mind, that this is a solution for Labels with simple text. If you want to underline just some parts of the Text using `FormattedText`, you might have a problem :) See my [post on FormattedText]({% post_url 2016-04-03-formattedtext.xamrin.forms %}) for more information on the problem.
 
 <h2 class="section-heading">Code Sample</h2>
-The implementation of the Effect are pushed to a github project <br>(<i class="fa fa-github"></i><a href="https://github.com/smstuebe/stackoverflow-answers/xamarin-forms-underline" target="_blank"> stackoverflow-answers/xamarin-forms-underline</a>). Feel free to use these if you want to play around or have a closer look to effects.
+The implementation of the Effect are pushed to a github project <br>(<i class="fa fa-github"></i><a href="https://github.com/smstuebe/stackoverflow-answers/tree/master/xamarin-forms-underline" target="_blank"> stackoverflow-answers/xamarin-forms-underline</a>). Feel free to use these if you want to play around or have a closer look to effects.
 
 <center>If you like the answer, I'd appreciate an upvote ;) <br><a href="http://stackoverflow.com/a/39200923/1489968" target="_blank" title="Answer">http://stackoverflow.com/a/39200923/1489968</a><br>Thanks!</center>
 
