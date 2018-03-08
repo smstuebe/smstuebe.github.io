@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Air gap your iOS debugging experience"
+title:      "Xamarin.iOS WiFi debugging"
 subtitle:   "How to free one USB port and debug your Xamarin.iOS Apps wireless."
 date:       2018-03-07 12:00:00
 author:     "Sven-Michael Stübe"
