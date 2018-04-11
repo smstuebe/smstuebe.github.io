@@ -1,24 +1,42 @@
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ site.description }}">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ site.description }}">
 
-    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
+  <!-- Bootstrap Core CSS -->
+  <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ "/css/clean-blog.css" | prepend: site.baseurl }}">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ "/css/clean-blog.css" | prepend: site.baseurl }}">
 
-    <!-- Pygments Github CSS -->
-    <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}">
-	
-	
+  <!-- Pygments Github CSS -->
+  <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}">
+
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css"/>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js" defer></script>
+  <script>
+  window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#edeff5",
+        "text": "#838391"
+      },
+      "button": {
+        "background": "#4b81e8"
+      }
+    },
+    "theme": "edgeless",
+    "position": "bottom-right"
+  })});
+  </script>
+
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:site" content="@stuebe2k7">
 	{% if page.title %}
