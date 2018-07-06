@@ -4,7 +4,7 @@ title:      "Using Xamarin Live Reload with VMWare Fusion in offline land"
 subtitle:   "Setup VMWare Fusion to enable Xamarin Live Reload using port forwarding instead of cloud services."
 date:       2018-07-06 12:00:00
 author:     "Sven-Michael Stübe"
-card-img:   "img/live-reload-vmware-library.png"
+card-img:   "img/live-reload-vmware-library-icon.png"
 tags:       [Xamarin, iOS, Live Reload, VMWare Fusion, Visual Studio, Xamarin.Forms, macOS]
 ---
 
